@@ -27,6 +27,9 @@ selections = [
     "—◉—————————",
 ]
 
+## After Edits with Timer Bar
+
+
 def time_to_sec(time: str):
     x = time.split(":")
 
