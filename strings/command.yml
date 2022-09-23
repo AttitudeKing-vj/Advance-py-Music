@@ -24,7 +24,7 @@ LANGUAGE_COMMAND : ["lang", "language", "langs"]
 PLAY_COMMAND : ["play", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce"]
 PLAYMODE_COMMAND : ["playmode"]
 CHANNELPLAY_COMMAND : ["channelplay"]
-STREAM_COMMAND : ["stream", "cstream", "streamforce"]
+STREAM_COMMAND : ["nostream", "nocstream", "nostreamforce"]
 
 #Playlists Command
 PLAYLIST_COMMAND : ["playlist"]
@@ -109,4 +109,4 @@ ACTIVEVIDEO_COMMAND : ["activevideo"]
 #Gban Commands
 GBAN_COMMAND : ["gban"]
 UNGBAN_COMMAND : ["ungban"]
-GBANNED_COMMAND : ["gbannedusers"]
+GBANNED_COMMAND : ["gbanlist"]
