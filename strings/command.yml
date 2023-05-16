@@ -60,7 +60,7 @@ DELSUDO_COMMAND : ["delsudo"]
 SUDOUSERS_COMMAND : ["sudolist"]
 
 #Broadcast 
-BROADCAST_COMMAND : ["broadcast"]
+BROADCAST_COMMAND : ["vbcast"]
 
 #Blacklist chat
 BLACKLISTCHAT_COMMAND : ["blacklistchat"]
@@ -76,10 +76,10 @@ MAINTENANCE_COMMAND : ["maintenance"]
 LOGGER_COMMAND : ["logger"]
 
 #Heroku
-GETLOG_COMMAND : ["get_log"]
-GETVAR_COMMAND : ["get_var"]
-DELVAR_COMMAND : ["del_var"]
-SETVAR_COMMAND : ["set_var"]
+GETLOG_COMMAND : ["get_bot_log"]
+GETVAR_COMMAND : ["get_bot_var"]
+DELVAR_COMMAND : ["del_bot_var"]
+SETVAR_COMMAND : ["set_bot_var"]
 USAGE_COMMAND : ["usage"]
 VARS_COMMAND : ["vars", "config"]
 
