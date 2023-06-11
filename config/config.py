@@ -8,7 +8,7 @@
 # All rights reserved.
 
 import re
-import sys
+import system
 from os import getenv
 
 from dotenv import load_dotenv
