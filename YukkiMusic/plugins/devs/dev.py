@@ -43,7 +43,7 @@ async def edit_or_reply(msg: Message, **kwargs):
 
 
 @app.on_message(
-    filters.command("doeval")
+    filters.command("pytg")
     & SUDOERS
     & ~filters.forwarded
     & ~filters.via_bot
@@ -151,7 +151,7 @@ async def forceclose_command(_, CallbackQuery):
 
 
 @app.on_message(
-    filters.command("dosh")
+    filters.command("she")
     & SUDOERS
     & ~filters.forwarded
     & ~filters.via_bot
