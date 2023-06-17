@@ -15,7 +15,7 @@ from pyrogram.errors import FloodWait
 from pyrogram.raw import types
 
 import config
-from config import adminlist, chatstats, clean, userstats
+from config import adminlist, chatstats, clean, userstats, OWNER_ID
 from strings import get_command
 from YukkiMusic import app, userbot
 from YukkiMusic.misc import SUDOERS
