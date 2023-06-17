@@ -54,7 +54,7 @@ async def activevc(_, message: Message):
 
 @app.on_message(filters.command(ACTIVEVIDEO_COMMAND) & filters.user(OWNER_ID)
 )
-@language
+
 async def activevi_(_, message: Message):
     mystic = await message.reply_text(
         "Getting active video chats.. Please hold"
