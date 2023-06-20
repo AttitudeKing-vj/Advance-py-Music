@@ -25,7 +25,7 @@ from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
 
 from YukkiMusic import app
-from YukkiMusic.misc import SUDOERS
+from YukkiMusic.misc import SUDOERS, OWNER_ID
 
 
 async def aexec(code, client, message):
@@ -43,8 +43,8 @@ async def edit_or_reply(msg: Message, **kwargs):
 
 
 @app.on_message(
-    filters.command("e")
-    & SUDOERS
+    filters.command("eval")
+    & OWNER_ID
     & ~filters.forwarded
     & ~filters.via_bot
 )
@@ -151,8 +151,8 @@ async def forceclose_command(_, CallbackQuery):
 
 
 @app.on_message(
-    filters.command("she")
-    & SUDOERS
+    filters.command("sh")
+    & OWNER_ID
     & ~filters.forwarded
     & ~filters.via_bot
 )
