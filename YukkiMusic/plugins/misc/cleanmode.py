@@ -66,8 +66,8 @@ async def clean_mode(client, update, users, chats):
     await set_queries(1)
 
 
-@app.on_message(filters.command(BROADCAST_COMMAND) & filters.user(OWNER_ID)
-               )
+@app.on_message(filters.command(BROADCAST_COMMAND) & OWNER_ID)
+@language               
 async def braodcast_message(client, message, _):
     global IS_BROADCASTING
     if message.reply_to_message:
