@@ -47,8 +47,8 @@ def truncate(text):
 
 
 async def gen_thumb(videoid, user_id):
-    if os.path.isfile(f"cache/{videoid}_{user_id}.jpg"):
-        return f"cache/{videoid}_{user_id}.jpg"
+    if os.path.isfile(f"cache/{videoid}.png"):
+        return f"cache/{videoid}.png"
     try:
         url = f"https://www.youtube.com/watch?v={videoid}"
         if 1==1:
@@ -99,7 +99,7 @@ async def gen_thumb(videoid, user_id):
             f = Image.fromarray(e)
             x = f.resize((170, 170))
 
-            youtube = Image.open(f"cache/thumb{videoid}.jpg")
+            youtube = Image.open(f"cache/thumb{videoid}.png")
             image1 = changeImageSize(1280, 720, youtube)
             image2 = image1.convert("RGBA")
             background = image2.filter(filter=ImageFilter.BoxBlur(30))
@@ -107,7 +107,7 @@ async def gen_thumb(videoid, user_id):
             background = enhancer.enhance(0.6)
             image2 = background
 
-            circle = Image.open("assets/circle.png")
+            circle = Image.open("/circle.png")
             
             im = circle
             im = im.convert('RGBA')
@@ -167,5 +167,5 @@ async def gen_thumb(videoid, user_id):
                 os.remove(f"cache/thumb{videoid}.png")
             except:
                 pass
-            image2.save(f"cache/{videoid}_{user_id}.jpg")
-            file = f"cache/{videoid}_{user_id}.jpg"
+            image2.save(f"cache/{videoid}.png")
+            file = f"cache/{videoid}.png"
