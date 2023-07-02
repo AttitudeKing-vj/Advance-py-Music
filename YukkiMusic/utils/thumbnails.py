@@ -20,6 +20,17 @@ from youtubesearchpython.__future__ import VideosSearch
 from config import MUSIC_BOT_NAME, YOUTUBE_IMG_URL
 
 
+def make_col():
+    return (random.randint(0,255),random.randint(0,255),random.randint(0,255))
+
+def changeImageSize(maxWidth, maxHeight, image):
+    widthRatio = maxWidth / image.size[0]
+    heightRatio = maxHeight / image.size[1]
+    newWidth = int(widthRatio * image.size[0])
+    newHeight = int(heightRatio * image.size[1])
+    newImage = image.resize((newWidth, newHeight))
+    return newImage
+
 def truncate(text):
     list = text.split(" ")
     text1 = ""
@@ -96,7 +107,7 @@ async def gen_thumb(videoid, user_id):
             background = enhancer.enhance(0.6)
             image2 = background
 
-            circle = Image.open("circle.png")
+            circle = Image.open("assets/circle.png")
             
             im = circle
             im = im.convert('RGBA')
@@ -133,7 +144,7 @@ async def gen_thumb(videoid, user_id):
             font4 = ImageFont.truetype('assets/font2.ttf', 35)
 
             image4 = ImageDraw.Draw(image2)
-            image4.text((10, 10), MUSIC_BOT_NAME, fill="black", font = font1, align ="left")
+            image4.text((10, 10), MUSIC_BOT_NAME, fill="white", font = font1, align ="left")
             image4.text((670, 150), "NOW PLAYING", fill="white", font = font2, stroke_width=2, stroke_fill="white", align ="left") 
 
             # title
@@ -158,7 +169,3 @@ async def gen_thumb(videoid, user_id):
                 pass
             image2.save(f"cache/{videoid}_{user_id}.jpg")
             file = f"cache/{videoid}_{user_id}.jpg"
-            return file
-    except Exception as e:
-        print(e)
-        return YOUTUBE_IMG_URL
