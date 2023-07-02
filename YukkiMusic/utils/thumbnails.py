@@ -127,7 +127,7 @@ async def gen_thumb(videoid):
             font4 = ImageFont.truetype('assets/font2.ttf', 35)
 
             image4 = ImageDraw.Draw(image3)
-            image4.text((30, 20), "Aviax Music", fill="white", font = font1)
+            image4.text((30, 20), "PyTgMusicBot", fill="white", font = font1)
             image4.text((80, 150), "NOW PLAYING", fill="white", font = font2, stroke_width=5, stroke_fill="black") 
 
             # title
