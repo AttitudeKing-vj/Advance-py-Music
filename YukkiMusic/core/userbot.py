@@ -1,4 +1,4 @@
-#
+50#
 # Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
 #
 # This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
@@ -24,7 +24,7 @@ class Userbot(Client):
         self.one = Client(
             api_id=config.API_ID,
             api_hash=config.API_HASH,
-            session_name=str(config.STRING1),
+            name=str(config.STRING1),
             no_updates=True,
         )
         self.two = Client(
