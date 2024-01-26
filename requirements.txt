@@ -12,7 +12,7 @@ pillow
 psutil
 py-tgcalls==0.9.2
 pykeyboard
-pyrogram==1.4.16
+git+https://github.com/TGExplore/pyrogram.git
 python-dotenv
 pyyaml
 requests
